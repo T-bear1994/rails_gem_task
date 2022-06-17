@@ -4,8 +4,11 @@
 
 <%= search_form_for @q do |f| %>
 
-  <%= f.label :title_or_description_cont %>
+  <%= f.label :キーワード %>
   <%= f.search_field :title_or_description_cont %>
+
+  <%= f.label :期間 %>
+  <%= f.date_field :deadline_gt %> ~ <%= f.date_field :deadline_lt %>
 
   <%= f.submit %>
 
