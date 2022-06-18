@@ -8,7 +8,7 @@
   <%= f.search_field :title_or_description_cont %>
 
   <%= f.label :期間 %>
-  <%= f.date_field :deadline_gt %> ～ <%= f.date_field :deadline_lt %>
+  <%= f.date_field :deadline_gteq %> ～ <%= f.date_field :deadline_lteq %>
   <br>
   <%= f.radio_button :status_eq, "", { :checked => true } %>
   <%= f.label :status, "指定なし", { value: "", style: "display: inline-block;" } %>
