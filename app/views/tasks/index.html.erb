@@ -8,9 +8,18 @@
   <%= f.search_field :title_or_description_cont %>
 
   <%= f.label :期間 %>
-  <%= f.date_field :deadline_gt %> ~ <%= f.date_field :deadline_lt %>
+  <%= f.date_field :deadline_gt %> ～ <%= f.date_field :deadline_lt %>
+  <br>
+  <%= f.radio_button :status_eq, "", { :checked => true } %>
+  <%= f.label :status, "指定なし", { value: "", style: "display: inline-block;" } %>
+  <%= f.radio_button :status_eq, 0 %>
+  <%= f.label :status, "todo", { value: 0, style: "display: inline-block;" } %>
+  <%= f.radio_button :status_eq, 1 %>
+  <%= f.label :status, "doing", { value: 1, style: "display: inline-block;" } %>
+  <%= f.radio_button :status_eq, 2 %>
+  <%= f.label :status, "done", { value: 2, style: "display: inline-block;" } %>
 
-  <%= f.submit %>
+  <%= f.submit  %>
 
 <% end %>
 
